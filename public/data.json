@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Family Law",
+    "license_number": "BD-1358",
+    "years_of_experience": 15,
+    "availability": ["Monday", "Wednesday", "Friday"],
+    "consultation_fee": 100
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Corporate Law",
+    "license_number": "BD-2764",
+    "years_of_experience": 12,
+    "availability": ["Tuesday", "Thursday"],
+    "consultation_fee": 120
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Criminal Law",
+    "license_number": "BD-4832",
+    "years_of_experience": 20,
+    "availability": ["Monday", "Wednesday", "Friday"],
+    "consultation_fee": 150
+  },
+  {
+    "id": 4,
+    "name": "Emily Brown",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Immigration Law",
+    "license_number": "BD-6291",
+    "years_of_experience": 18,
+    "availability": ["Tuesday", "Thursday"],
+    "consultation_fee": 130
+  },
+  {
+    "id": 5,
+    "name": "David Wilson",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Real Estate Law",
+    "license_number": "BD-7145",
+    "years_of_experience": 14,
+    "availability": ["Monday", "Wednesday", "Friday"],
+    "consultation_fee": 110
+  },
+  {
+    "id": 6,
+    "name": "Sarah Miller",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Intellectual Property Law",
+    "license_number": "BD-3529",
+    "years_of_experience": 16,
+    "availability": ["Tuesday", "Thursday"],
+    "consultation_fee": 140
+  },
+  {
+    "id": 7,
+    "name": "Robert Martinez",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Personal Injury Law",
+    "license_number": "BD-8190",
+    "years_of_experience": 22,
+    "availability": ["Monday", "Wednesday", "Friday"],
+    "consultation_fee": 160
+  },
+  {
+    "id": 8,
+    "name": "Jennifer Lee",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Environmental Law",
+    "license_number": "BD-4682",
+    "years_of_experience": 19,
+    "availability": ["Tuesday", "Thursday"],
+    "consultation_fee": 125
+  },
+  {
+    "id": 9,
+    "name": "Kevin Adams",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Tax Law",
+    "license_number": "BD-5973",
+    "years_of_experience": 17,
+    "availability": ["Monday", "Wednesday", "Friday"],
+    "consultation_fee": 135
+  },
+  {
+    "id": 10,
+    "name": "Amanda Carter",
+    "image": "https://i.ibb.co.com/0R05Xsbv/istockphoto-1326920136-612x612.jpg",
+    "department": "Employment Law",
+    "license_number": "BD-2406",
+    "years_of_experience": 13,
+    "availability": ["Tuesday", "Thursday"],
+    "consultation_fee": 115
+  }
+]

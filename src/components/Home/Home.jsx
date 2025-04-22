@@ -1,10 +1,12 @@
 import React from "react";
 import LawServices from "../LawServices/LawServices";
+import BestLawyers from "../BestLawyers/BestLawyers";
 
 const Home = () => {
   return (
     <div className="bg-white text-black">
       <div className="w-full max-w-[1280px] mx-auto">
+        <BestLawyers></BestLawyers>
         <LawServices></LawServices>
       </div>
     </div>
