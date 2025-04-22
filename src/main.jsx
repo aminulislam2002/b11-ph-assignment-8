@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Root from "./components/Root/Root.jsx";
 import Home from "./components/Home/Home.jsx";
 import LawyerDetails from "./components/LawyerDetails/LawyerDetails.jsx";
+import MyBookings from "./components/MyBookings/MyBookings.JSX";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "lawyer/:license_number",
         Component: LawyerDetails,
+      },
+      {
+        path: "my-bookings",
+        Component: MyBookings,
       },
     ],
   },

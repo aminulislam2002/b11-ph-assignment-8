@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
+import { toast, ToastContainer } from "react-toastify";
 
 const LawyerDetails = () => {
   const { license_number } = useParams();
   const [lawyer, setLawyer] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/data.json")
@@ -20,8 +22,36 @@ const LawyerDetails = () => {
       });
   }, [license_number]);
 
+  const handleBooking = () => {
+    const existingBookings = JSON.parse(localStorage.getItem("bookedAppointments")) || [];
+    const isAlreadyBooked = existingBookings.find((item) => item.license_number === lawyer.license_number);
+
+    if (isAlreadyBooked) {
+      toast.error("You already booked an appointment with this lawyer.");
+      return;
+    }
+
+    const updatedBookings = [...existingBookings, lawyer];
+    localStorage.setItem("bookedAppointments", JSON.stringify(updatedBookings));
+
+    toast.success(`Appointment booked with ${lawyer.name}`);
+    navigate("/my-bookings");
+  };
+
   return (
     <div className="relative bg-white text-black py-10">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="w-full max-w-[1280px] mx-auto">
         {!lawyer ? (
           <div>
@@ -111,7 +141,11 @@ const LawyerDetails = () => {
               Due to high patient volume, we are currently accepting appointments for today only. We appreciate your
               understanding and cooperation.
             </span>
-            <button className="w-full h-10 bg-[#0EA106] text-white hover:bg-white hover:text-black hover:border hover:border-gray-300 transition-colors duration-300 text-base text-center rounded-full">
+
+            <button
+              onClick={handleBooking}
+              className="w-full h-10 bg-[#0EA106] text-white hover:bg-white hover:text-black hover:border hover:border-gray-300 transition-colors duration-300 text-base text-center rounded-full"
+            >
               Book Appointment Now
             </button>
           </div>
