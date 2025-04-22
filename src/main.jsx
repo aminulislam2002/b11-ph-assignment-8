@@ -5,12 +5,19 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Root from "./components/Root/Root.jsx";
 import Home from "./components/Home/Home.jsx";
+import LawyerDetails from "./components/LawyerDetails/LawyerDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    children: [{ index: true, Component: Home }],
+    children: [
+      { index: true, Component: Home },
+      {
+        path: "lawyer/:license_number",
+        Component: LawyerDetails,
+      },
+    ],
   },
 ]);
 

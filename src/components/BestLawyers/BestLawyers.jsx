@@ -39,23 +39,26 @@ const BestLawyers = () => {
           <div className="grid grid-cols-2 gap-5">
             {displayedLayers.map((lawyer) => (
               <div
-                key={lawyer.id}
+                key={lawyer?.id}
                 className="bg-white rounded-md p-5 shadow-md border border-gray-300 flex justify-start items-center gap-20"
               >
-                <img src={lawyer.image} alt={lawyer.name} className="w-[160px] h-[160px] object-cover rounded-md" />
+                <img src={lawyer?.image} alt={lawyer?.name} className="w-[160px] h-[160px] object-cover rounded-md" />
 
                 <div className="w-full h-full">
                   <div className="mb-2.5">
                     <span className="px-2.5 py-1 rounded-full bg-green-100 text-green-500 text-sm mr-2.5">Available</span>
 
                     <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-500 text-sm">
-                      {lawyer.years_of_experience}+ Years Experience
+                      {lawyer?.years_of_experience}+ Years Experience
                     </span>
                   </div>
-                  <h2 className="text-2xl font-bold mb-1">{lawyer.name}</h2>
-                  <p className="text-base font-normal text-gray-600 mb-1">{lawyer.department}</p>
-                  <p className="text-sm text-gray-600 mb-2.5">License: {lawyer.license_number}</p>
-                  <Link className="w-full h-10 bg-white text-black hover:bg-[#0EA106] hover:text-white border border-gray-300 hover:border-none transition-colors duration-300 text-base rounded-full flex justify-center items-center">
+                  <h2 className="text-2xl font-bold mb-1">{lawyer?.name}</h2>
+                  <p className="text-base font-normal text-gray-600 mb-1">{lawyer?.department}</p>
+                  <p className="text-sm text-gray-600 mb-2.5">License: {lawyer?.license_number}</p>
+                  <Link
+                    to={`/lawyer/${lawyer?.license_number}`}
+                    className="w-full h-10 bg-white text-black hover:bg-[#0EA106] hover:text-white border border-gray-300 hover:border-none transition-colors duration-300 text-base rounded-full flex justify-center items-center"
+                  >
                     View Details
                   </Link>
                 </div>
