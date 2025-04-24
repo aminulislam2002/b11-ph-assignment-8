@@ -17,24 +17,25 @@ const LawyerDetails = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+        console.error(error);
         setLoading(false);
       });
   }, [license_number]);
 
   const handleBooking = () => {
     const existingBookings = JSON.parse(localStorage.getItem("bookedAppointments")) || [];
-    const isAlreadyBooked = existingBookings.find((item) => item.license_number === lawyer.license_number);
+
+    const isAlreadyBooked = existingBookings.find((item) => item?.license_number === lawyer?.license_number);
 
     if (isAlreadyBooked) {
-      toast.error("You already booked an appointment with this lawyer.");
+      toast.error(`You already scheduled an appointment with ${lawyer?.name}.`);
       return;
     }
 
     const updatedBookings = [...existingBookings, lawyer];
     localStorage.setItem("bookedAppointments", JSON.stringify(updatedBookings));
 
-    toast.success(`Appointment booked with ${lawyer.name}`);
+    toast.success(`Appointment scheduled for ${lawyer?.name} successfully`);
     navigate("/my-bookings");
   };
 
@@ -52,6 +53,7 @@ const LawyerDetails = () => {
         pauseOnHover
         theme="light"
       />
+
       <div className="w-full max-w-[1280px] mx-auto">
         {!lawyer ? (
           <div>

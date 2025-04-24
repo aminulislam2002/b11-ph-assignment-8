@@ -20,10 +20,10 @@ const Header = () => {
               <Link to="/my-bookings">My Booking</Link>
             </li>
             <li className="text-black">
-              <Link>Blogs</Link>
+              <Link to="blogs">Blogs</Link>
             </li>
             <li className="text-black">
-              <Link>Contact Us</Link>
+              <Link to="contact-us">Contact Us</Link>
             </li>
           </ul>
         </div>
