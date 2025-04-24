@@ -8,6 +8,7 @@ import Home from "./components/Home/Home.jsx";
 import LawyerDetails from "./components/LawyerDetails/LawyerDetails.jsx";
 import MyBookings from "./components/MyBookings/MyBookings.JSX";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+import Blogs from "./components/Blogs/Blogs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "my-bookings",
         Component: MyBookings,
+      },
+      {
+        path: "blogs",
+        Component: Blogs,
       },
     ],
   },

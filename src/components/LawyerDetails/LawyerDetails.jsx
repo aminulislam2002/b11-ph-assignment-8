@@ -56,7 +56,7 @@ const LawyerDetails = () => {
 
       <div className="w-full max-w-[1280px] mx-auto">
         {!lawyer ? (
-          <div>
+          <div className="mb-10">
             <h2 className="text-3xl text-center font-extrabold mb-2.5">No Lawyer Found!</h2>
             <p className="text-center mx-auto text-base font-normal text-[#0F0F0F] mb-2.5">
               No Lawyer Found with the License No.
