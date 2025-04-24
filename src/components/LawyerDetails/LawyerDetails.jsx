@@ -77,10 +77,11 @@ const LawyerDetails = () => {
             <div className="bg-white rounded-md p-16 shadow border border-gray-300 flex flex-col justify-center items-center mb-8">
               <h1 className="text-[40px] font-extrabold mb-4">Lawyer’s Profile Details</h1>
               <p className="w-3/4 text-center mx-auto text-base font-normal text-[#0F0F0F] mb-8">
-                Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum
-                magna. Quis vitae tempus facilisis turpis imperdiet mattis donec dignissim volutpat.
+                Experienced and dedicated legal professional offering expert advice and representation across a range of
+                practice areas. Committed to protecting clients’ rights and delivering effective legal solutions with
+                integrity, confidentiality, and personalized attention.
               </p>
-            </div>
+            </div> 
 
             {loading ? (
               <div className="flex justify-center items-center">
